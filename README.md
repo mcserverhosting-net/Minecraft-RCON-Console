@@ -2,8 +2,8 @@
 ##### Tool for send server command via RCON protocal of minecraft server by website.
 
 ##### Forked by MCSH and updated. Now maintained. 
-![Screenshot]([/images/logo.png](https://raw.githubusercontent.com/mcserverhosting-net/Minecraft-RCON-Console/master/console-sample.png))
-![Performance]([/images/logo.png](https://raw.githubusercontent.com/mcserverhosting-net/Minecraft-RCON-Console/master/console-report.png))
+![Screenshot](https://raw.githubusercontent.com/mcserverhosting-net/Minecraft-RCON-Console/master/console-sample.png)
+![Performance](https://raw.githubusercontent.com/mcserverhosting-net/Minecraft-RCON-Console/master/console-report.png)
 
 ### Version
 
