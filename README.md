@@ -1,11 +1,18 @@
 # Minecraft RCON Console
 ##### Tool for send server command via RCON protocal of minecraft server by website.
 
-![alt tag](https://github.com/ekaomk/Minecraft-RCON-Console/blob/master/screenshot/pc.jpg)
-
-![alt tag](https://cdn.rawgit.com/ekaomk/Minecraft-RCON-Console/master/screenshot/mobile.png)
+##### Forked by MCSH and updated. Now maintained. 
 
 ### Version
+
+##### 2.2
+* Added k8s deployment configs. Replace image with package or your own.
+* Updated configuration process
+* Updated to bootstrap 4
+* Set to be able to run as non-root user
+* Containerized
+* New background image
+* Cleaned up API/query ref
 
 ##### 2.1
 * Change query library.
@@ -27,8 +34,11 @@
 * List all name of current player online.
 
 # Setting up
-1. Download/Clone source file
-2. Edit "config.php" (port number and RCON password on you.)
+Note: If running inside MCSH, this dashboard is included by default.
+
+
+1. docker pull docker.pkg.github.com/mcserverhosting-net/minecraft-rcon-console/rcon-console:v2.2
+2. Adjust k8s/config.yaml to your server
 ```php
 $rconHost = "localhost";
 $rconPort = 25575;
@@ -36,9 +46,7 @@ $rconPassword = "rconpassword";
 $queryHost = "localhost";
 $queryPort = 25585;
 ```
-3. Edit "authsys.php" to create accounts (information in file) - the default username is `admin`, default password `1234abcd`
-4. Upload all file to your server.
-5. Edit your "server.properties" file.
+3. Edit your "server.properties" file.
 add (port number and RCON password on you.)
 ```
 query.port=25585
@@ -50,5 +58,4 @@ and change
 enable-rcon=true
 enable-query=true
 ```
-6. Restart your server.
-7. Done.
+4. Restart your server.

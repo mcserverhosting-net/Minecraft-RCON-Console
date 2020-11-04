@@ -14,6 +14,9 @@ spec:
       labels:
         app: mcsh-rcon-console
     spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1001
       containers:
       - name: mcsh-rcon-console
         resources:
@@ -22,10 +25,19 @@ spec:
             cpu: 100m
         securityContext:
           readOnlyRootFilesystem: false
-          runAsNonRoot: false
+          runAsNonRoot: true
           capabilities:
             drop:
             - ALL
         image: harbor.internal/quantomworks/mcsh-rcon-console
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - name: rcon-config
+          mountPath: /var/www/html/config.php
+          subPath: config.php
+          readOnly: true
+      volumes:
+      - name: rcon-config
+        configMap:
+          name: rcon-config
