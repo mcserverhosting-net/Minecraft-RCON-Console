@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcsh-rcon-console
+  labels:
+    app: mcsh-rcon-console
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mcsh-rcon-console
+  template:
+    metadata:
+      labels:
+        app: mcsh-rcon-console
+    spec:
+      containers:
+      - name: mcsh-rcon-console
+        resources:
+          limits:
+            memory: 100Mi
+            cpu: 100m
+        securityContext:
+          readOnlyRootFilesystem: false
+          runAsNonRoot: false
+          capabilities:
+            drop:
+            - ALL
+        image: harbor.internal/quantomworks/mcsh-rcon-console
+        ports:
+        - containerPort: 8080

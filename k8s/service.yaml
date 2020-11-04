@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name:  mcsh-rcon-console
+  labels:
+    type:  mcsh-rcon-console
+spec:
+  type: ClusterIP
+  ports:
+  - name: mcsh-rcon-console
+    port: 8080
+    protocol: TCP
+  selector:
+    app: mcsh-rcon-console

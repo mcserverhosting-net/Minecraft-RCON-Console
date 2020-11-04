@@ -18,11 +18,10 @@ This file is part of Minecraft-RCON-Console.
 
 $serverName = "My Server";
 
-$rconHost = "localhost";
+$rconHost = "chart-1604218396";
 $rconPort = 25575;
-$rconPassword = "rconpassword";
+$rconPassword = "p9E38WkkwzJvbwwQ";
 
-$queryHost = "localhost";
-$queryPort = 25585;
-require(__DIR__ . "/authsys.php");
+$queryHost = "10.101.46.42";
+$queryPort = 25565;
 ?>

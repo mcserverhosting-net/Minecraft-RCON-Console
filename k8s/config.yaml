@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rcon-config
+data:
+  config.php: |
+    <?php
+    $serverName = "My Server";
+
+    $rconHost = "chart-1604218396";
+    $rconPort = 25575;
+    $rconPassword = "p9E38WkkwzJvbwwQ";
+
+    $queryHost = "10.101.46.42";
+    $queryPort = 25565;
+    ?>

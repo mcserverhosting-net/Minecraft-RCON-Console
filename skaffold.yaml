@@ -1,0 +1,17 @@
+apiVersion: skaffold/v2alpha1
+kind: Config
+metadata:
+  name: minecraft-rcon-console
+build:
+  artifacts:
+  - image: harbor.internal/quantomworks/mcsh-rcon-console
+    context: .
+    sync:
+      infer:
+      - 'app/*/*.php'
+      - 'app/*/*.js'
+      - 'app/*/*.css'
+deploy:
+  kubectl:
+    manifests:
+    - k8s\*.yaml
