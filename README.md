@@ -2,11 +2,13 @@
 ##### Tool for send server command via RCON protocal of minecraft server by website.
 
 ##### Forked by MCSH and updated. Now maintained. 
+![Screenshot]([/images/logo.png](https://raw.githubusercontent.com/mcserverhosting-net/Minecraft-RCON-Console/master/console-sample.png))
+![Performance]([/images/logo.png](https://raw.githubusercontent.com/mcserverhosting-net/Minecraft-RCON-Console/master/console-report.png))
 
 ### Version
 
 ##### 2.2
-* Added k8s deployment configs. Replace image with package or your own.
+* Added k8s deployment configs.
 * Updated configuration process
 * Updated to bootstrap 4
 * Set to be able to run as non-root user
